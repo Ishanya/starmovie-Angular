@@ -1,0 +1,41 @@
+
+<head>
+
+    <link data-require="bootstrap-css@3.3.6"
+  data-semver="3.3.6" rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+  </head>
+
+<body>
+  <br>
+  
+<div id="loop" *ngFor="let movie of favMovieList">
+<div id="image">
+    <img class="w-100" src={{movie.moviePosterUrl}}>
+</div>
+<div id="data">
+  
+    <h3 class="card-title text-danger"><strong>{{movie.movieName}}</strong></h3>
+    <p class="card-text text-justify">{{movie.movieDescription}}</p>
+    <p class="card-text text-justify">{{movie.movieReleaseDate}}</p>
+</div>
+
+<button type="button" id="dot" class="btn btn-danger" (click)="deleteFavourite(movie.movieId)"><i class="glyphicon glyphicon-trash"></i></button>
+</div>
+</body>
+
+<!-- <div class="card col-md-12 p-3" >
+    <div class="row ">
+      <div class="col-md-4">
+        <img class="w-100" src={{movie.moviePosterUrl}}>
+      </div>
+      <div class="col-md-8">
+        <div class="card-block">
+          <h6 class="card-title">{{movie.movieName}}</h6>
+          <p class="card-text text-justify">{{movie.movieDescription}}</p>
+          <a href="#" class="btn btn-primary">{{movie.movieReleaseDate}}</a>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div> -->
